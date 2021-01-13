@@ -26,6 +26,7 @@ usersRouter.patch(
             user_id: request.user.id,
             avatarFilename: request.file.filename,
         });
+        user.password='';
         return response.json(user);
     },
 );
